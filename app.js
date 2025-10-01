@@ -1,7 +1,7 @@
 <!-- ===== app.js ===== -->
 // 1) PASTE YOUR GAS WEB APP URL BELOW after you deploy GAS.
 //    Example: const GAS_URL = 'https://script.google.com/macros/s/AKfycb.../exec';
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbwjsFY9nBdiJPA1JJy6r7bqPwY6UjRuKd7gNkEjML_Z_DdHyOnKMTSUj1S6P7rucJAZ/exec';
+const GAS_URL = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjmomFyve1WXs018gqnvN-BNEdogr4Dq077C93Mq7Z7c7LR6bd9TH3p-pWSf2lphrYjbGczMbDJKpok7d7URZ6VpMTn0jJ-cp0pjDBaXu9COwaPYnIoagWOhXRhLKCEmqj64CVLE96M8U0pp9dfYrul2R3pdR9Ebun6Df8hNAHNQ8M62eiWRxNxmm91FfaL4bZwQhcqdxL3xPSbS5E0pGNA-lne-k887NthIAHggmYV1f3iDHJjFSbcQTDqPFnuBUy9qN-r-kU1msCrDkYv84ZgJGdnww&lib=MGCBecPUqvyFFM19T9bHHTjI3yRUM8Pyy';
 
 // ---------- state ----------
 const state = {
