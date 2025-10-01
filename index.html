@@ -1,0 +1,99 @@
+<!-- ===== index.html ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bosaso Engineering System</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">Bosaso Engineering System</div>
+      <div class="menu">
+        <span id="who" class="muted"></span>
+        <button id="hamburger" class="iconbtn" aria-label="Menu">☰</button>
+        <nav id="dropdown" class="dropdown hidden"></nav>
+      </div>
+    </header>
+
+    <!-- LOGIN -->
+    <section id="view-login" class="card">
+      <h2>Login</h2>
+      <p class="muted">Username + password (demo: 12345; change later).</p>
+      <form id="loginForm" class="grid grid1">
+        <label>Username <input id="loginUser" autocomplete="username"/></label>
+        <label>Password <input id="loginPass" type="password" autocomplete="current-password"/></label>
+        <div class="actions"><button class="btn primary" type="submit">Sign in</button></div>
+        <div id="loginMsg" class="banner warn hidden"></div>
+      </form>
+    </section>
+
+    <!-- CHANGE PASSWORD -->
+    <section id="view-changePw" class="card hidden">
+      <h2>Change Password</h2>
+      <form id="pwForm" class="grid grid1">
+        <label>Old Password <input id="oldPw" type="password"/></label>
+        <label>New Password <input id="newPw" type="password"/></label>
+        <div class="actions"><button class="btn primary" type="submit">Update Password</button></div>
+        <div id="pwMsg" class="banner warn hidden"></div>
+      </form>
+    </section>
+
+    <!-- FORM -->
+    <section id="view-form" class="card hidden">
+      <h2>Engineer Survey Form</h2>
+      <form id="surveyForm">
+        <input type="hidden" id="currentId" />
+        <div class="grid">
+          <label>Owner Name <input id="owner_name" required/></label>
+          <label>Assistance <select id="assistance"></select></label>
+          <label>Width <input id="width" type="number" step="any"/></label>
+          <label>Length <input id="length" type="number" step="any"/></label>
+          <label>Sub-District <select id="sub_district"></select></label>
+          <label>Section <select id="section"></select></label>
+          <label>Nearby <input id="nearby"/></label>
+          <label>GPS Link <input id="gps_link" type="url" placeholder="https://maps.google.com/..."/></label>
+          <label>KML File <input id="kml" type="file" accept=".kml,application/vnd.google-earth.kml+xml"/></label>
+          <label>Picture <input id="picture" type="file" accept="image/*" capture="environment"/></label>
+        </div>
+        <div class="actions">
+          <button id="saveBtn" class="btn primary" type="submit">Save Entry</button>
+          <button id="resetBtn" class="btn" type="button">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- LIST -->
+    <section id="view-list" class="card hidden">
+      <div class="list-head">
+        <h2>Entered Data</h2>
+        <input id="search" class="search" placeholder="Search by ID, Owner, Section, Sub-District..."/>
+      </div>
+      <div class="tablewrap">
+        <table id="dataTable">
+          <thead>
+          <tr>
+            <th data-k="Unique ID">ID</th>
+            <th data-k="Owner Name">Owner</th>
+            <th data-k="Assistance">Assistance</th>
+            <th data-k="Width">W</th>
+            <th data-k="Length">L</th>
+            <th data-k="Sub-District">Sub-District</th>
+            <th data-k="Section">Section</th>
+            <th data-k="GPS Link">GPS</th>
+            <th data-k="KML File Link">KML</th>
+            <th data-k="Picture File Link">Pic</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
